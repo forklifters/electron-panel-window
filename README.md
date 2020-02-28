@@ -1,6 +1,6 @@
-[![npm version](https://badge.fury.io/js/electron-panel-window.svg)](https://badge.fury.io/js/electron-panel-window) [![CircleCI](https://circleci.com/gh/goabstract/electron-panel-window.svg?style=svg)](https://circleci.com/gh/goabstract/electron-panel-window)
-
 # electron-panel-window
+
+> Modified from [Tom Moor's electron-panel-window repository](https://github.com/goabstract/electron-panel-window).
 
 Enables creating a browser window in Electron that behaves like a [Panel](https://developer.apple.com/documentation/appkit/nspanel). Panels are typically used for auxillary windows and do not activate the application – as such they can appear ontop of other apps in the same way as Spotlight or 1Password, for example.
 
@@ -38,7 +38,7 @@ makeKeyWindow(currentWindow);
 
 ## Development
 
-To compile the extension for the first time, run 
+To compile the extension for the first time, run
 
 ```bash
 $ yarn

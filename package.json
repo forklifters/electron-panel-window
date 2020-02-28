@@ -1,14 +1,15 @@
 {
-  "name": "electron-panel-window",
+  "name": "@virtuallyvivek/electron-panel-window",
   "description": "Create Electron BrowserWindow's that act like Panels",
   "version": "1.1.0",
-  "author": "Tom Moor <tom@goabstract.com>",
+  "author": "Vivek Nair <vivek@pragli.com>",
   "main": "index.js",
   "scripts": {
     "configure": "node-gyp configure",
     "prepare": "node-gyp build",
     "build": "node-gyp build",
-    "test": "mocha"
+    "test": "mocha",
+    "install": "node-gyp rebuild"
   },
   "devDependencies": {
     "electron": "1.8.8",
@@ -22,9 +23,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/goabstract/electron-panel-window"
+    "url": "git+https://github.com/VivekNair/electron-panel-window.git"
   },
   "bugs": {
-    "url": "https://github.com/goabstract/electron-panel-window/issues"
-  }
+    "url": "https://github.com/VivekNair/electron-panel-window/issues"
+  },
+  "gypfile": true,
+  "homepage": "https://github.com/VivekNair/electron-panel-window#readme",
+  "directories": {
+    "test": "test"
+  },
+  "license": "ISC"
 }
