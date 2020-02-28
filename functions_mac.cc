@@ -15,6 +15,12 @@
 - (BOOL)acceptsFirstResponder {
   return YES;
 }
+- (BOOL)canBecomeKeyWindow  {
+  return YES;
+}
+- (BOOL) titlebarAppearsTransparent {
+  return YES;
+}
 @end
 
 NAN_METHOD(MakePanel) {
@@ -34,6 +40,11 @@ NAN_METHOD(MakePanel) {
   // Ensure that the window is a "non activating panel" which means it won't activate the application
   // when it becomes key.
   mainContentView.window.styleMask |= NSWindowStyleMaskNonactivatingPanel;
+  mainContentView.window.styleMask |= NSWindowStyleMaskBorderless;
+  mainContentView.window.styleMask |= NSFullSizeContentViewWindowMask;
+  mainContentView.window.styleMask &= ~NSWindowStyleMaskTitled;
+
+  mainContentView.window.titlebarAppearsTransparent = true;
 
   // Ensure that the window can display over the top of fullscreen apps
   [mainContentView.window setCollectionBehavior: NSWindowCollectionBehaviorTransient | NSWindowCollectionBehaviorMoveToActiveSpace | NSWindowCollectionBehaviorFullScreenAuxiliary ];
